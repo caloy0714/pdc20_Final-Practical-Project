@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+        <link rel="stylesheet" type="text/css" href="css/register.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>LOGIN</title>
+    </head>
+    <body ng-app=""  style="background-image: url('img/login-bg.jpeg');">
+        <form name="form" class="login100-form validate-form" oninput="res.value=a.value;">
+        
+                <span class="login100-form-title p-b-43">
+                    Quick Start
+                </span>
+            
+            <div ng-hide="toShow" class="wrap-input100 validate-input" data-validate = "Validinput required: ex@abc.xyz">
+                <input class="input100" type="text" name="a" required required ng-model="Name" placeholder="Email" />
+                <span class="focus-input100"></span>
+            </div>
+            <br>
+            <div ng-hide="toShow" class="wrap-input100 validate-input" data-validate = "Validinput required: ex@abc.xyz">
+
+                <input class="input100" type="password" name="pass" type="password" required ng-model="pass" placeholder="Password" />
+                <span class="focus-input100"></span>
+                <br>
+                <br>
+            </div>
+                <div class="flex-sb-m w-full p-t-3 p-b-32" ng-hide="toShow">
+                    <div class="contact100-form-checkbox">
+                        <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                        <label class="label-checkbox100" for="ckb1">
+                             Remember me
+                        </label>
+                    </div>
+                </div>
+                    <div ng-hide="toShow"class="container-login100-form-btn" type="button" ng-disabled="form.$invalid" ng-click="toShow = true" value="Sign-In">
+                        <button class="orange-button">
+                            Login
+                        </button>
+                    </div>
+            </div>
+
+            <div ng-show="toShow">
+                <h1>Welcome <output name="res"></output>!</h1><br>
+                    <div>
+                        <a class="orange-button" href="index.html">
+                            Enter to Quick Start
+                        </a>
+                    </div>
+            </div>
+        </form>
+    </body>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</html>
